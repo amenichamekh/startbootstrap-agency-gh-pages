@@ -14,15 +14,15 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: #212529;
 }
 
 a:hover {
-  color: #fec503;
+  color: #212529;
 }
 
 .text-primary {
-  color: #fed136 !important;
+  color: #2196F3  !important;
 }
 
 h1,
@@ -96,6 +96,9 @@ img::-moz-selection {
   background-color: #dc3545;
   border-color: #dc3545;
 }
+.navbar-shrink .nav-link:hover {
+    color: #2196F3 !important;
+}
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   background-color: #fec810 !important;
@@ -117,18 +120,24 @@ img::-moz-selection {
   padding: 13px;
   text-transform: uppercase;
   color: white;
-  border: 0;
-  background-color: #fed136;
+  border: 0; 
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
+  color: #ffffff;
+  text-transform: uppercase;
   font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 700;
 }
-
+.navbar-shrink .navbar-brand { 
+  color: #292727 !important;
+}
+.navbar-shrink .nav-link {
+  color: #292727 !important;
+}
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fec503;
+  color: #292727; 
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -136,12 +145,21 @@ img::-moz-selection {
   font-weight: 400;
   padding: 0.75em 0;
   letter-spacing: 1px;
-  color: white;
+  color: #fff;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+.btn-primary {
+    background-color: #2196F3 !important;
+    border-color: #2196F3 !important;
+}
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: white;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: #000000;
 }
 
 @media (min-width: 992px) {
@@ -162,7 +180,8 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #212529;
+    background-color: #ffffff;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(8,10,37,.03), 0 0.9375rem 1.40625rem rgba(8,10,37,.03), 0 0.25rem 0.53125rem rgba(8,10,37,.05), 0 0.125rem 0.1875rem rgba(8,10,37,.03)
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -170,9 +189,18 @@ img::-moz-selection {
   }
 }
 
+ 
+._X12B {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0, 0.6);
+}
 header.masthead {
   text-align: center;
-  color: blue;
+  color: #fff;
   background-image: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -202,9 +230,11 @@ header.masthead .intro-text .intro-heading {
 }
 
 @media (min-width: 768px) {
-  header.masthead .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+  header.masthead .intro-text {  
+        z-index: 999;
+    position: relative;
+    width: 100%;
+    height: 100vh;
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
@@ -246,7 +276,7 @@ header.masthead .intro-text .intro-heading {
   height: 100%;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(254, 209, 54, 0.9);
+    background: rgba(40, 40, 40, 0.57);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -279,6 +309,7 @@ header.masthead .intro-text .intro-heading {
   padding: 25px;
   text-align: center;
   background-color: #fff;
+      box-shadow: 0 7px 14px 0 rgba(60,66,87, 0.12), 0 3px 6px 0 rgba(0,0,0, 0.12);
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -569,9 +600,9 @@ header.masthead .intro-text .intro-heading {
 }
 
 .team-member img {
-  width: 225px;
-  height: 225px;
-  border: 7px solid rgba(0, 0, 0, 0.1);
+    width: 200px;
+    object-fit: cover;
+    box-shadow: 0 7px 14px 0 rgba(60,66,87, 0.12), 0 3px 6px 0 rgba(0,0,0, 0.12);
 }
 
 .team-member h4 {
@@ -621,7 +652,7 @@ section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-} 
+}
 
 section#contact :-moz-placeholder {
   font-weight: 700;
@@ -675,7 +706,7 @@ ul.social-buttons li a {
   color: white;
   border-radius: 100%;
   outline: none;
-  background-color: #212529;
+  background-color: #2196F3 ;
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
